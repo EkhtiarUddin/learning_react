@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins";
+  background: var(--secondary);
+}
+* {
+  color: #fff;
+  margin: 0;
+}
+p {
+  margin: 20px 0;
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+/* navbar */
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header nav h1 {
+  margin-right: auto;
+  border-bottom: 3px solid var(--primary);
+}
+header nav a{
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: var(--primary);
+}
+
+/* page content */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.blog-preview a{
+  text-decoration: none;
+}
+
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* help layout */
+
+
+/* faq */
+
+
+/* careers list */
+
+
+/* careers details */
+
+
+/* breadcrumbs */
