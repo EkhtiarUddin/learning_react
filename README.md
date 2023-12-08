@@ -296,3 +296,41 @@ const Home = () => {
 
 export default Home;
 
+# Higher-Order Components (HOCs)
+Higher-order components (HOCs) are a pattern in React that allows the reuse of component logic by wrapping components with a function. A Higher-Order Component is a function that takes a component and returns a new component with additional functionality. HOCs do not modify the input component; instead, they create a new component that wraps the original one.
+
+Here's a basic example to illustrate the concept of a Higher-Order Component:
+// HigherOrderComponent.js
+
+import React, { Component } from 'react';
+
+// Higher-Order Component (HOC) function
+const withLogger = (WrappedComponent) => {
+  class WithLogger extends Component {
+    componentDidMount() {
+      console.log(`Component ${WrappedComponent.name} is mounted.`);
+    }
+
+    componentWillUnmount() {
+      console.log(`Component ${WrappedComponent.name} is unmounted.`);
+    }
+
+    render() {
+      // Pass all props to the wrapped component
+      return <WrappedComponent {...this.props} />;
+    }
+  }
+
+  // Rename the display name for better debugging
+  WithLogger.displayName = `WithLogger(${getDisplayName(WrappedComponent)})`;
+
+  return WithLogger;
+};
+
+// Helper function to get the display name of a component
+const getDisplayName = (WrappedComponent) => {
+  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+};
+
+export default withLogger;
+
