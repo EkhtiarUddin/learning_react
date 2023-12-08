@@ -1,13 +1,15 @@
-import './App.css';
+import React from 'react';
+import FunctionalComponent from './FunctionalComponent';
+import ClassComponent from './classComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <div className="content">
-        <h1>App Component</h1>
-      </div>
+    <div>
+      <h1>Hello React!</h1>
+      <FunctionalComponent name="John" />
+      <ClassComponent />
     </div>
   );
-}
+};
 
 export default App;
